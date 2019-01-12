@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source config
+source `dirname $BASH_SOURCE`/config
 
 DATA_UPLOAD_FILES=()
 MYSQL_UPLOAD_FILES=()
