@@ -1,0 +1,25 @@
+# Hostname of the server. You may change to another server name.
+export HOSTNAME=`hostname`
+
+export BUCKET="mybucketname"
+
+# Backup directories
+export BACKUP_DIRS=(
+    /home/user1
+    /home/user2
+    /var/www/html
+)
+
+# Array of database names to backup. Leave blank to backup all databases in a single dumpfile
+# export BACKUP_DB=() # Dump all
+export BACKUP_DB=(
+    database1
+    database2
+)
+
+export MYSQL_USER="root"
+export MYSQL_PASS=""
+
+export TMP_DIR="/tmp"
+
+export AWS_BIN=`which aws`
