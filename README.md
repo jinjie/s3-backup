@@ -15,6 +15,7 @@ No fuss, just works.
 1. Create a new s3 or use an existing one.
 2. Create a new user with access key 
 3. Run `aws configure` to configure access key. This will create a file `credentials` in ~/.aws/
+4. Copy `config.example` to `config` and edit to suit your needs
 4. Configure cron job to run this script based on your backup schedule.
 
 ## Folder structure
