@@ -19,9 +19,9 @@ then
 
     if [ -z "$MYSQL_PASS" ]
     then
-        mysqldump -u $MYSQL_USER $db --all-databases | gzip > $BACKUP_FILE
+        mysqldump -u $MYSQL_USER --all-databases | gzip > $BACKUP_FILE
     else
-        mysqldump -u $MYSQL_USER -p $MYSQL_PASS $db --all-databases | gzip > $BACKUP_FILE
+        mysqldump -u $MYSQL_USER -p $MYSQL_PASS --all-databases | gzip > $BACKUP_FILE
     fi
 
     echo "Dumped all databases"
