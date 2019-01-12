@@ -21,7 +21,7 @@ then
     then
         mysqldump -u $MYSQL_USER --all-databases | gzip > $BACKUP_FILE
     else
-        mysqldump -u $MYSQL_USER -p $MYSQL_PASS --all-databases | gzip > $BACKUP_FILE
+        mysqldump -u $MYSQL_USER -p$MYSQL_PASS --all-databases | gzip > $BACKUP_FILE
     fi
 
     echo "Dumped all databases"
@@ -37,7 +37,7 @@ else
         then
             mysqldump -u $MYSQL_USER $db | gzip > $BACKUP_FILE
         else
-            mysqldump -u $MYSQL_USER -p $MYSQL_PASS $db | gzip > $BACKUP_FILE
+            mysqldump -u $MYSQL_USER -p$MYSQL_PASS $db | gzip > $BACKUP_FILE
         fi
 
         echo Dumped database: $db
